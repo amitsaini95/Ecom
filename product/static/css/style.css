@@ -2,11 +2,9 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-
 }
 .NavbarMenu{
-    background-color:rgb(114, 124, 124) !important;
-    
+    background-color:rgb(114, 124, 124) !important;   
 }
 .NavbarMenu ul{
     margin: auto;
@@ -19,4 +17,8 @@
 }
 .NavbarMenu ul li a:hover{
     color: rgb(255, 0, 76);
+}
+.productItem .productImage{
+    width: 100%;
+    height: 230px;
 }
