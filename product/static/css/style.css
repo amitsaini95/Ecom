@@ -18,10 +18,31 @@
 .NavbarMenu ul li a:hover{
     color: rgb(255, 0, 76);
 }
-.productItem{
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-.productItem .productImage{
+.product-item{
     width: 100%;
-    height: 230px;
+    height: 300px;
+    background-position:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    position: relative;
+
+}
+.product-item .product-content{
+    position: absolute;
+    content: '';
+    bottom: 20px;
+    left: 20px;   
+}
+.product-item .product-content h3{
+    font-size:30px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:rgb(255, 255, 255);
+    font-weight: bolder;
+}
+
+.product-item .right-set{
+    display: none;
+    transition: 2s;
 }
