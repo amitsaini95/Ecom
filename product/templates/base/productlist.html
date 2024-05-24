@@ -2,14 +2,15 @@
 {% block content %}
 <h5>Product</h5>
 <div class="row">
-    {% for product in product %}
-    <div class="col-4 productItem">
-        <div class="card" style="width: 18rem;">
+    {% for product in products %}
+    <div class="col-4 ">
+        <div class="card productItem" style="width: 18rem;">
             {% if product.productImage %}
             <img src="{{product.productImage.url}}" class="card-img-top productImage" alt="Image of {{product.name}}">
             {% endif %}
             <div class="card-body">
-              <h3 class="card-title">{{product.name}}</h5>
+            
+              <h3 class="card-title"><a href="{% url 'product:productDetails' slug=product.slug %}">{{product.name}}</a></h5>
               <h6 class="card-text">{{product.price}}</h6>
               <p class="card-text"></p>
               <a href="#" class="btn btn-primary">Add to Cart</a>
