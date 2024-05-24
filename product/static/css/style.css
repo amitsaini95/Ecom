@@ -4,3 +4,19 @@
     box-sizing: border-box;
 
 }
+.NavbarMenu{
+    background-color:rgb(114, 124, 124) !important;
+    
+}
+.NavbarMenu ul{
+    margin: auto;
+}
+.NavbarMenu ul li a{
+    color: white; 
+    font-size: 17px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
+.NavbarMenu ul li a:hover{
+    color: rgb(255, 0, 76);
+}
