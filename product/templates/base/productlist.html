@@ -1,0 +1,14 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<h5>Product</h5>
+<div class="row">
+    {% for product in product %}
+    <div class="col-4">
+        <h3>{{product.name}}</h3>
+        <h6>{{product.price}}</h6>
+        <p>{{product.desc|truncatewords:5}}</p>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
