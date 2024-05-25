@@ -1,10 +1,13 @@
 {% extends 'base/base.html' %}
 {% block content %}
-<h5>Product</h5>
+
 <div class="row">
+    <div class="col-3">
+        {% include 'base/category.html' %}
+    </div>
     {% for product in products %}
     <div class="col-3 ">
-        <div class="product-item ">
+        <div class="product-item " id="">
             <img src="{{product.productImage.url}}" id="prodcut-{{product.name}}">
             <div class="product-content">
             <h3 class="product-name">{{product.name}}</h3>

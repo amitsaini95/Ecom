@@ -1,0 +1,17 @@
+<div class="category">
+    <h4>Browser category</h4>
+    <ul>
+        <li>
+            <a href="{% url 'product:ProductList' %}">All</a>
+        </li>
+        {% for category in categories %}
+        <li>
+    
+            <a href="{% url 'product:ProductList' %}?category={{category.name}}">{{category.name}}</a>
+        </li>
+        {% endfor %}
+         
+    </ul>
+    
+    
+    </div>

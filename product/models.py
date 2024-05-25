@@ -33,7 +33,7 @@ class Product(models.Model):
     name=models.CharField(max_length=60)
     slug=models.CharField(blank=True,max_length=60)
     auth=models.ForeignKey(User,on_delete=models.CASCADE,null=True,blank=True)
-    category=models.ForeignKey(Category,on_delete=models.CASCADE,null=True,blank=True)
+    category=models.ForeignKey(Category,on_delete=models.CASCADE,null=True,blank=True,related_name="category")
     productImage=models.ImageField(upload_to="productImage",null=True,blank=True)
     tag=models.ManyToManyField(Tag,null=True,blank=True)
     desc=models.TextField()
