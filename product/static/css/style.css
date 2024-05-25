@@ -7,16 +7,27 @@
     background-color:rgb(114, 124, 124) !important;   
 }
 .NavbarMenu ul{
-    margin: auto;
+    position: relative;
+    width: 100%;
+    
+}
+.NavbarMenu ul .right-item{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+   
+    
+    
 }
 .NavbarMenu ul li a{
     color: white; 
     font-size: 17px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
+   
 }
 .NavbarMenu ul li a:hover{
-    color: rgb(255, 0, 76);
+    color: rgb(134, 41, 64))));
 }
 .product-item {
     height: 300px;

@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 class SignUpForm(UserCreationForm):
     class Meta:
         model=User
-        fields=('username','password','password1')
+        fields=('username','password1','password2')
 class LoginForm(AuthenticationForm):
     username=forms.CharField(max_length=100)
     password=forms.CharField(widget=forms.PasswordInput())

@@ -9,7 +9,6 @@ def SignUpView(request):
         form=SignUpForm(request.POST)
         if form.is_valid():
             user_data=form.save()
-
             user=UserProfileModel.objects.create(user=user_data)
             return redirect('auth:Login')
     else:
@@ -27,8 +26,7 @@ def LoginView(request):
             user=authenticate(request,username=username,password=password)
             if user is  not None:
                 login(request,user)
-                return redirect('/')
-                
+                return redirect('product:ProductList')         
     else:
         form=LoginForm()
     context={
