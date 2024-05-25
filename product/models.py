@@ -35,6 +35,7 @@ class Product(models.Model):
     auth=models.ForeignKey(User,on_delete=models.CASCADE,null=True,blank=True)
     category=models.ForeignKey(Category,on_delete=models.CASCADE,null=True,blank=True)
     productImage=models.ImageField(upload_to="productImage",null=True,blank=True)
+    tag=models.ManyToManyField(Tag,null=True,blank=True)
     desc=models.TextField()
     price=models.IntegerField()
     created=models.DateTimeField(auto_now_add=True)
