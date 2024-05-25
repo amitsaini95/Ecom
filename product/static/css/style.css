@@ -8,26 +8,21 @@
 }
 .NavbarMenu ul{
     position: relative;
-    width: 100%;
-    
+    width: 100%;  
 }
 .NavbarMenu ul .right-item{
     display: flex;
     justify-content: end;
-    width: 100%;
-   
-    
-    
+    width: 100%;  
 }
 .NavbarMenu ul li a{
     color: white; 
     font-size: 17px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 600;
-   
+    font-weight: 600;  
 }
 .NavbarMenu ul li a:hover{
-    color: rgb(134, 41, 64))));
+    color: rgb(255, 115, 0);
 }
 .product-item {
     height: 300px;
@@ -35,8 +30,6 @@
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-
-
 }
 .product-item img{
     width: 100%;
@@ -44,8 +37,6 @@
     position: relative;
     transform: scale(1.0);
     transition: 3s;
-    
-
 }
 .product-item .product-content{
     position: absolute;
@@ -59,7 +50,6 @@
     color:rgb(255, 255, 255);
     font-weight: bolder;
 }
-
 .product-item .right-set{
     display: none;
     transition: 7s;
@@ -75,10 +65,8 @@
    opacity: .7;
    border-radius: 10px;
 }
-
 .product-item:hover .product-content{
-    display: none;
-    
+    display: none;  
 }
 .product-item:hover >.right-set{
     display: block;
@@ -87,15 +75,11 @@
 .product-item:hover >img{
     transform: scale(1.2);
 }
-
 @keyframes move{
     from {
         opacity:0;
-    
       }
-      to {
+    to{
         opacity: .7;
-       
-      }
-     
+    }   
 }
