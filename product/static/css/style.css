@@ -40,7 +40,7 @@
     position: absolute;
     content: '';
     bottom: 20px;
-    left: 20px;   
+    left: 20px;  
 }
 .product-item .product-content h3{
     font-size:30px;
@@ -55,12 +55,12 @@
    color: white;
    position: absolute;
    left: 50%;
-   bottom: -90%;
+   top: 50%;
    width: 100%;
    height: 100%;
    transform: translate(-50%,-50%);
    padding: 40px;
-   background: rgb(32, 37, 35);
+   background: rgb(0, 84, 105);
    opacity: .7;
    border-radius: 10px;
 }
@@ -71,7 +71,7 @@
 }
 .product-item:hover >.right-set{
     display: block;
-    animation: move 4s ease-in-out;
+    animation: move 2s ease-in-out;
 }
 .product-item:hover >img{
     transform: scale(1.2);
@@ -80,9 +80,8 @@
 @keyframes move{
     from {
         opacity:0;
-       
-      }
     
+      }
       to {
         opacity: .7;
        
