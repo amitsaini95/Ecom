@@ -61,6 +61,8 @@ class Cart(models.Model):
     updated=models.DateTimeField(auto_now=True)
     def __str__(self):
         return self.product.name
+    def totalPrice(self):
+        return self.product.price *self.quantity
 
     
     

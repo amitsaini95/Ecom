@@ -8,7 +8,7 @@ urlpatterns=[
     path('addProduct',views.AddProductView,name="Addproductlist"),
     path('edit/product/<slug:slug>',views.EditProductView,name="editproductlist"),
     path('addCart',views.AddCartView,name="AddCartlist"),
-    path('Cartlist',views.CartViewList,name="cartViewlist")
-    
+    path('Cartlist',views.CartViewList,name="cartViewlist"),
+    path('product/delete/<int:id>',views.DeleteProductView,name="deleteproduct")
 
 ]

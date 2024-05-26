@@ -9,6 +9,8 @@
             <th scope="col">product Image</th>
             <th scope="col">price</th>
             <th scope="col">Quantity</th>
+            <th scope="col">Total</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -19,6 +21,8 @@
             <td><img src="{{cart.product.productimage}}" width="50px" height="50px"></td>
             <td>${{cart.product.price}}</td>
             <td>{{cart.quantity}}</td>
+            <td>${{cart.totalPrice}}</td>
+            <td><a href="{% url 'product:deleteproduct' cart.id %}">Remove</a></td>
 
 
           </tr>
