@@ -1,0 +1,10 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<div class="add-product">
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="edit">
+    </form>
+</div>
+{% endblock %}

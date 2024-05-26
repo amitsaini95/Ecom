@@ -6,7 +6,6 @@ def ProductView(request):
     cat=request.GET.get('category')  if request.GET.get('category') != None else ''
     categories=Category.objects.all()
     products=Product.objects.filter(category__slug__icontains=cat)
-    print(products)
     context={
             'products':products,
             'categories':categories
@@ -35,4 +34,17 @@ def AddProductView(request):
         'form':form
     }
     return render(request,"base/addproduct.html",context)
+def EditProductView(request,slug):
+    instance=get_object_or_404(Product,slug=slug)
+    if request.method == "POST":
+        form=ProductForm(request.POST,request.FILES,instance=instance)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+    else:
+        form=ProductForm(instance=instance)
+    context={
+        'form':form
+    }
+    return render(request,"base/editproduct.html",context)
     

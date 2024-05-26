@@ -8,3 +8,11 @@ class ProductForm(ModelForm):
         super(ProductForm, self).__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'form-control'
+class EditForm(ModelForm):
+    class Meta:
+        model=Product
+        fields='__all__'
+    def __init__(self, *args, **kwargs):
+        super(EditForm, self).__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'form-control'

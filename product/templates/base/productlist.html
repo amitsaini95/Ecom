@@ -10,15 +10,18 @@
         <div class="product-item">
             
             <img src="{{product.productimage}}" id="prodcut-{{product.name}}">
-            <div class="product-content">
+         <div class="product-content">
             <h3 class="product-name">{{product.name}}</h3>
            </div>
             <div class="right-set">
             
               <h2 class="product-price">$<span>{{product.price}}</span></h2>
               <p>{{product.desc}} </p>
+
             
               <button class="btn btn-primary">ADD TO CART</button>
+              <a href="{% url 'product:editproductlist' slug=product.slug %}" class="text-white">Edit</a>
+     
             </div>
         
         </div>
