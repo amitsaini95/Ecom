@@ -13,20 +13,23 @@
             <div class="col-12 p-0">
                 <nav class="navbar navbar-expand-lg NavbarMenu ">
                     <div class="container-fluid">
-                      <a class="navbar-brand text-white" href="{% url 'product:ProductList' %}">Navbar</a>
+                      <a class="navbar-brand text-white">ECOM</a>
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
                       <div class="collapse navbar-collapse" id="navbarSupportedContent">
                           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             {% if request.user.is_authenticated %}
-                          <li class="nav-item ">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                          </li>
-                          <div class="right-item">
-                              <li class="nav-item">
-                                <a class="nav-link active " aria-current="page" href="">My Account</a>
+                            <li class="nav-item ">
+                                <a class="nav-link active" aria-current="page" href="{% url 'product:ProductList' %}">Home</a>
                               </li>
+                          <div class="right-item">
+                            <li class="nav-item">
+                              <a class="nav-link active " aria-current="page" href="">My Account</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link active " aria-current="page" href="{% url 'product:Addproductlist' %}">Add product</a>
+                            </li>
                           <li class="nav-item">
                             <a class="nav-link active " aria-current="page" href="{% url 'auth:Logout' %}">Logout</a>
                           </li>
@@ -34,7 +37,7 @@
                           {% else %}
                           <div class="right-item">
                           <li class="nav-item  ">
-                            <a class="nav-link active  " aria-current="page" href="{% url 'auth:Signup' %}">SignUp</a>
+                            <a class="nav-link active  " aria-current="page" href="{% url 'auth:Signup' %}">Signup</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link active " aria-current="page" href="{% url 'auth:Login' %}">Login</a>
@@ -53,7 +56,7 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 my-2">
                 {% block content %}
                 {% endblock %}
             </div>

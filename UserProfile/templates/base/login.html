@@ -2,7 +2,7 @@
 {% block content %}
   <div class="User-login my-2">
     <form action="" method="post">
-        <h3>Login</h3>
+        <h3 class="text-danger">Login</h3>
         {% csrf_token %}
         {% for field in form %}
         <div class="fieldWrapper">

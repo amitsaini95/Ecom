@@ -44,6 +44,14 @@ class Product(models.Model):
         self.slug=slugify(self.name)
         return super(Product,self).save(*args,**kwargs)
     
+    def productimage(self):
+        try:
+            url=self.productImage.url
+        except:
+            url=''
+        return url
+
+    
     def __str__(self):
         return self.name
     
