@@ -1,12 +1,19 @@
 {% extends 'base/base.html' %}
 {% block content %}
+<div class="row">
+  <div class="col-9 mt-3">
+
+
 <div class="add cart">
+  
+  {% if cart %}
+  
     <table class="table table-bordered table-striped">
         <thead>
           <tr>
             <th scope="col">S.no</th>
-            <th scope="col">Name</th>
             <th scope="col">product Image</th>
+            <th scope="col">Name</th>
             <th scope="col">price</th>
             <th scope="col">Quantity</th>
             <th scope="col">Total</th>
@@ -17,17 +24,27 @@
             {% for cart in cart %}
           <tr>
             <th scope="row">{{forloop.counter}}</th>
-            <td>{{cart.product.name}}</td>
             <td><img src="{{cart.product.productimage}}" width="50px" height="50px"></td>
+            <td>{{cart.product.name}}</td>
             <td>${{cart.product.price}}</td>
             <td>{{cart.quantity}}</td>
             <td>${{cart.totalPrice}}</td>
-            <td><a href="{% url 'product:deleteproduct' cart.id %}">Remove</a></td>
-
-
+            <td><a href="{% url 'product:deleteproduct' cart.id %}"><i class="bi bi-trash3"></i></a></td>
           </tr>
        {% endfor %}
         </tbody>
       </table>
+      {% else %}
+      <h2>No product Item</h2>
+      {% endif %}
+</div>
+</div>
+<div class="col-3 cartsummary">
+  <h5 class="text-danger">Cart Summary</h5>
+  <p>Sub Total :<span>${{productcost}}</span></p>
+  <p>Shipping Cost :<span>$1</span></p>
+  <hr>
+  <p>Grand Total :<span>${{productcost|add:1}}</span></p>
+</div>
 </div>
 {% endblock %} 

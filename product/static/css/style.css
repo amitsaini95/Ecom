@@ -83,3 +83,18 @@
         opacity: .7;
     }   
 }
+.cartsummary h6{
+    color: chocolate;
+  
+}
+.cartsummary{
+    padding:10px 30px 4px 30px;
+    background: #f3f6ff;
+    border-radius: 10px;
+    height: 200px;
+}
+.cartsummary p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

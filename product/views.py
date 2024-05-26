@@ -65,8 +65,12 @@ def AddCartView(request):
   
 def CartViewList(request):
     cartdata=Cart.objects.filter(user=request.user)
+    totalitem=cartdata.count()
+    totalprice=sum(item.product.price *item.quantity for item in cartdata)
     context={
-        'cart':cartdata,   
+        'cart':cartdata, 
+        'productcost':totalprice,
+        'totalitem':totalitem  
     }
     return render(request,"base/cart.html",context)
 def DeleteProductView(request,id):
