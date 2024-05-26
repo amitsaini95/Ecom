@@ -17,7 +17,11 @@
             
               <h2 class="product-price">$<span>{{product.price}}</span></h2>
               <p>{{product.desc}} </p>
-              <button class="btn btn-primary">ADD TO CART</button>
+              <form method="post" action="{% url 'product:AddCartlist' %} ">
+                {% csrf_token %}
+                <input type="hidden" name="product-id" value="{{product.id}}">
+                <button class="btn btn-primary">add To cart</button>
+            </form>
               <a href="{% url 'product:editproductlist' slug=product.slug %}" class="text-white">Edit</a>
      
             </div>

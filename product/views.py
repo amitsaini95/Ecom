@@ -47,4 +47,28 @@ def EditProductView(request,slug):
         'form':form
     }
     return render(request,"base/editproduct.html",context)
-    
+def AddCartView(request):
+
+    product_id=request.POST.get('product-id') if request.POST.get('product-id') !=None else ''
+    product=get_object_or_404(Product,id=product_id)
+    print(product)
+    if Cart.objects.filter(product=product,user=request.user,quantity=1).exists():
+        
+        return redirect('product:cartViewlist')
+    else:
+        cartitem=Cart.objects.create(product=product,user=request.user)
+        cartitem.quantity=1
+        cartitem.save()
+        return redirect('product:cartViewlist')
+  
+   
+
+def CartViewList(request):
+    cartdata=Cart.objects.filter(user=request.user)
+    print(cartdata)
+    totalprice=sum(item.product.price * item.quantity for item in cartdata)
+    context={
+        'cart':cartdata,
+        'totalprice':totalprice
+    }
+    return render(request,"base/cart.html",context)
