@@ -73,6 +73,9 @@ def CartViewList(request):
         'totalitem':totalitem  
     }
     return render(request,"base/cart.html",context)
+def CheckoutView(request):
+    pass
+
 def DeleteProductView(request,id):
     productDel=get_object_or_404(Cart,id=id)
     productDel.delete()

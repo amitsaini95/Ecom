@@ -39,12 +39,19 @@
       {% endif %}
 </div>
 </div>
-<div class="col-3 cartsummary">
+<div class="col-3">
+  <div class="cartsummary" style="margin-top: 15px;">
   <h5 class="text-danger">Cart Summary</h5>
   <p>Sub Total :<span>${{productcost}}</span></p>
   <p>Shipping Cost :<span>$1</span></p>
   <hr>
   <p>Grand Total :<span>${{productcost|add:1}}</span></p>
 </div>
+<div class="checkoutContainer ">
+
+  <button class="checkout my-2 btn btn-secondary">Checkout</button>
+</div>
+</div>
+
 </div>
 {% endblock %} 

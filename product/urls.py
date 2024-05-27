@@ -9,6 +9,7 @@ urlpatterns=[
     path('edit/product/<slug:slug>',views.EditProductView,name="editproductlist"),
     path('addCart',views.AddCartView,name="AddCartlist"),
     path('Cartlist',views.CartViewList,name="cartViewlist"),
-    path('product/delete/<int:id>',views.DeleteProductView,name="deleteproduct")
+    path('product/delete/<int:id>',views.DeleteProductView,name="deleteproduct"),
+    path('checkout',views.CheckoutView,name="Checkout")
 
 ]
